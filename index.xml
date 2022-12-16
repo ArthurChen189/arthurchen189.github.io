@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home - Arthur (Haonan) Chen on Arthur (Haonan) Chen</title>
+    <link>https://arthurchen.github.io/</link>
+    <description>Recent content in Home - Arthur (Haonan) Chen on Arthur (Haonan) Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Dec 2022 17:46:12 +0000</lastBuildDate><atom:link href="https://arthurchen.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publications</title>
+      <link>https://arthurchen.github.io/publications/</link>
+      <pubDate>Fri, 16 Dec 2022 17:47:22 +0000</pubDate>
+      
+      <guid>https://arthurchen.github.io/publications/</guid>
+      
+        <description>A Gaggle of Resources for Open-Domain Question Answering
+Ronak Pradeep, Haonan Chen, Lingwei Gu, Manveer Singh Tamber and Jimmy Lin
+European Conference on Information Retrieval (ECIR 2023)
+Causal Discovery from Sparse Time-Series Data Using Echo State Network
+Haonan Chen, Bo Yuan Chang, Mohamed A. Naiel1, Georges Younes, Steven Wardell, Stan Kleinikkink, John S. Zelek
+Computer Vision and Intelligent System (CVIS 2022)</description>
+      
+    </item>
+    
+  </channel>
+</rss>
