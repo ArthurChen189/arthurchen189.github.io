@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home - Arthur (Haonan) Chen on Arthur (Haonan) Chen</title>
-    <link>https://arthurchen189.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home - Arthur (Haonan) Chen on Arthur (Haonan) Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Dec 2022 17:46:12 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Dec 2022 17:46:12 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications and Preprints</title>
-      <link>https://arthurchen189.github.io/publications/</link>
+      <link>http://localhost:1313/publications/</link>
       <pubDate>Fri, 16 Dec 2022 17:47:22 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/publications/</guid>
+      <guid>http://localhost:1313/publications/</guid>
       
         <description>Publications In reversed chronological order
-  UniIR: Training and Benchmarking Universal Multimodal Information Retrievers
+UniIR: Training and Benchmarking Universal Multimodal Information Retrievers
 Cong Wei, Yang Chen, Haonan Chen, Hexiang Hu, Ge Zhang, Jie Fu, Alan Ritter, Wenhu Chen
 European Conference on Computer Vision (ECCV 2024)
-  A Gaggle of Resources for Open-Domain Question Answering
+A Gaggle of Resources for Open-Domain Question Answering
 Ronak Pradeep, Haonan Chen, Lingwei Gu, Manveer Singh Tamber and Jimmy Lin
 European Conference on Information Retrieval (ECIR 2023)
-  Causal Discovery from Sparse Time-Series Data Using Echo State Network</description>
+Causal Discovery from Sparse Time-Series Data Using Echo State Network</description>
       
     </item>
     
