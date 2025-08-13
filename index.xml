@@ -1,34 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home - Arthur Haonan Chen on Arthur Haonan Chen</title>
+    <title>Home - Arthur Chen on Arthur Haonan Chen</title>
     <link>https://arthurchen189.github.io/</link>
-    <description>Recent content in Home - Arthur Haonan Chen on Arthur Haonan Chen</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Home - Arthur Chen on Arthur Haonan Chen</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Mar 2025 17:46:12 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Aug 2025 05:19:36 +0000</lastBuildDate>
+    <atom:link href="https://arthurchen189.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications and Preprints</title>
       <link>https://arthurchen189.github.io/publications/</link>
-      <pubDate>Thu, 20 Mar 2025 17:47:22 +0000</pubDate>
-      
+      <pubDate>Wed, 13 Aug 2025 05:19:36 +0000</pubDate>
       <guid>https://arthurchen189.github.io/publications/</guid>
-      
-        <description>&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;In reversed chronological order&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17136&#34;&gt;UniIR: Training and Benchmarking Universal Multimodal Information Retrievers&lt;/a&gt;&lt;br&gt;
-Cong Wei, Yang Chen, &lt;strong&gt;Haonan Chen&lt;/strong&gt;, Hexiang Hu, Ge Zhang, Jie Fu, Alan Ritter, Wenhu Chen&lt;br&gt;
-&lt;em&gt;European Conference on Computer Vision (ECCV 2024)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.18503&#34;&gt;End-to-End Retrieval with Learned Dense and Sparse Representations Using Lucene&lt;/a&gt;&lt;br&gt;
-&lt;strong&gt;Haonan Chen&lt;/strong&gt;, Carlos Lassance, and Jimmy Lin&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
+      <description>&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;In reversed chronological order&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17136&#34;&gt;UniIR: Training and Benchmarking Universal Multimodal Information Retrievers&lt;/a&gt;&lt;br&gt;&#xA;Cong Wei, Yang Chen, &lt;strong&gt;Haonan Chen&lt;/strong&gt;, Hexiang Hu, Ge Zhang, Jie Fu, Alan Ritter, Wenhu Chen&lt;br&gt;&#xA;&lt;em&gt;European Conference on Computer Vision (ECCV 2024)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>
