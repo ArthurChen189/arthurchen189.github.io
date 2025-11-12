@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graduate School on Arthur Chen</title>
+    <link>http://localhost:1313/tags/graduate-school/</link>
+    <description>Recent content in Graduate School on Arthur Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/graduate-school/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First year at Waterloo</title>
+      <link>http://localhost:1313/writings/example-post/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writings/example-post/</guid>
+      
+        <description>&lt;h1 id=&#34;reflecting-on-my-first-year-as-a-masters-student-at-waterloo&#34;&gt;Reflecting on My First Year as a Master&amp;rsquo;s Student at Waterloo&lt;/h1&gt;
+&lt;p&gt;As I sit down to reflect on my first year as a master&amp;rsquo;s student at the University of Waterloo, I&amp;rsquo;m filled with immense gratitude for the incredible journey this past year has been. The transition from undergraduate studies to graduate research has been both challenging and deeply rewarding, and I feel incredibly fortunate for the opportunities that have come my way.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

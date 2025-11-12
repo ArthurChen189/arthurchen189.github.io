@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example on Arthur Chen</title>
+    <link>http://localhost:1313/tags/example/</link>
+    <description>Recent content in Example on Arthur Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Blog Post</title>
+      <link>http://localhost:1313/writings/example-post/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writings/example-post/</guid>
+      
+        <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is an example blog post to get you started with your writings section. You can replace this content with your actual blog posts.&lt;/p&gt;
+&lt;h2 id=&#34;main-content&#34;&gt;Main Content&lt;/h2&gt;
+&lt;p&gt;Here you can write your blog post content using Markdown formatting. You can include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Italic text&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Code snippets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://example.com&#34;&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Images&lt;/li&gt;
+&lt;li&gt;And much more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;code-examples&#34;&gt;Code Examples&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello_world&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Success!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is where you can wrap up your blog post with a conclusion or call to action.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
