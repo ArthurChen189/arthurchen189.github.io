@@ -215,7 +215,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
 
     ,
         "url" : "https:\/\/arthurchen189.github.io\/projects\/synque\/",
-        "wordCount" : "415",
+        "wordCount" : "422",
         "genre" : [ 
       
       "Research"
@@ -512,30 +512,9 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
 <p>We formalize <strong>SynQuE</strong>, a new evaluation setting:<br>
 given a pool of synthetic datasets and a small unannotated real dataset, estimate which synthetic dataset will produce the best downstream model performance.</p>
 <h3 id="2-proxy-metrics-for-synthetic-data-quality">2. Proxy Metrics for Synthetic Data Quality</h3>
-<p>We adapt multiple <strong>annotation-free divergence measures</strong>, including:</p>
 <ul>
-<li>
-<p><strong>Distribution-matching divergences</strong></p>
-<ul>
-<li>Proxy-A-Distance (PAD)</li>
-<li>Maximum Mean Discrepancy (MMD)</li>
-</ul>
-</li>
-<li>
-<p><strong>Diversity-matching divergences</strong></p>
-<ul>
-<li>Mean Distance to Medoid (MDM)</li>
-</ul>
-</li>
-<li>
-<p><strong>Mauve score divergence</strong></p>
-<ul>
-<li>A metric to compute divergence between AI generated text and human-written text</li>
-</ul>
-</li>
-<li>
-<p><strong>LENS</strong> &ndash; a novel <strong>LLM-based proxy metric</strong> that generates a rubric to characterize the differences between synthetic and real data</p>
-</li>
+<li><strong>LENS (Novel Contribution):</strong> We introduce <strong>LENS</strong>, a principled <strong>LLM-based metric</strong> that uses reasoning to generate rubrics for distinguishing real and synthetic data. LENS excels at <strong>complex, long-horizon tasks</strong> (e.g., web navigation) where traditional embedding-based metrics often fail.</li>
+<li><strong>Benchmarking Baselines:</strong> We systematically adapt and evaluate standard annotation-free divergence measures (PAD, MMD, Mauve) to the SynQuE setting, establishing strong baselines that remain effective for simpler tasks.</li>
 </ul>
 <hr>
 <h2 id="-lens-llm-evaluated-normalized-score">🔍 LENS: LLM-Evaluated Normalized Score</h2>
