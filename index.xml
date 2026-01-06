@@ -82,28 +82,5 @@ This paper introduces &lt;strong&gt;grounded test-time adaptation (GTTA)&lt;/str
       
     </item>
     
-    <item>
-      <title>Publications and Preprints</title>
-      <link>https://arthurchen189.github.io/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://arthurchen189.github.io/publications/</guid>
-      
-        <description>&lt;!-- ## Publications and Preprints --&gt;
-&lt;p&gt;&lt;em&gt;In reversed chronological order&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2511.04847&#34;&gt;Grounded Test-Time Adaptation for LLM Agents&lt;/a&gt;&lt;br&gt;
-&lt;strong&gt;Arthur Chen&lt;/strong&gt;, Zuxin Liu, Jianguo Zhang, Akshara Prabhakar, Zhiwei Liu, Shelby Heinecke, Silvio Savarese, Victor Zhong, Caiming Xiong&lt;br&gt;
-&lt;em&gt;Under Review&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2511.03928&#34;&gt;SynQuE: Estimating Synthetic Dataset Quality Without Annotations&lt;/a&gt;&lt;br&gt;
-&lt;strong&gt;Arthur Chen&lt;/strong&gt; and Victor Zhong&lt;br&gt;
-&lt;em&gt;Under Review&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2311.17136&#34;&gt;UniIR: Training and Benchmarking Universal Multimodal Information Retrievers&lt;/a&gt;&lt;br&gt;
-Cong Wei, Yang Chen, &lt;strong&gt;Arthur Chen&lt;/strong&gt;, Hexiang Hu, Ge Zhang, Jie Fu, Alan Ritter, Wenhu Chen&lt;br&gt;
-&lt;em&gt;European Conference on Computer Vision (ECCV 2024 Oral)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-    </item>
-    
   </channel>
 </rss>
