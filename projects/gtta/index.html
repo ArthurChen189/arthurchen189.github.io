@@ -1,0 +1,634 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+        |
+        Grounded Test-Time Adaptation for LLM Agents
+      
+
+    
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.149.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="" />
+  <meta
+    name="description"
+    content="University of Waterloo
+"
+  />
+  
+  
+        <link rel="stylesheet" href="/css/anatole.min.9afca1435bf22634690a78ac9e9168ed60abcc28b1591d0a7f28e592626e4a2b.css" integrity="sha256-mvyhQ1vyJjRpCnisnpFo7WCrzCixWR0KfyjlkmJuSis=" crossorigin="anonymous" />
+      
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://arthurchen189.github.io/projects/gtta/" />
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  <script
+  async
+  defer
+  src="https://analytics.umami.is/script.js"
+  data-website-id="af8e5ce6-141f-48f1-88cd-a508f1014def"
+></script>
+
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Grounded Test-Time Adaptation for LLM Agents">
+  <meta name="twitter:description" content="📝 Authors Arthur Chen, Zuxin Liu, Jianguo Zhang, Akshara Prabhakar, Zhiwei Liu, Shelby Heinecke, Silvio Savarese, Victor Zhong, Caiming Xiong
+arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
+🚀 Overview LLM-based agents can perform complex tasks like web navigation and function calling, but they often fail to generalize when deployed in new environments due to mismatches between their pre-training and the syntax (i.e., UI elements, input/output formats) and dynamics (i.e., environment transition rules) of the test-time environment. Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect. This paper introduces grounded test-time adaptation (GTTA) techniques that allow agents to adapt during deployment – without annotations or expensive retraining – improving robustness and performance in unseen settings.">
+
+
+
+  
+  <meta property="og:url" content="https://arthurchen189.github.io/projects/gtta/">
+  <meta property="og:site_name" content="Arthur Chen">
+  <meta property="og:title" content="Grounded Test-Time Adaptation for LLM Agents">
+  <meta property="og:description" content="📝 Authors Arthur Chen, Zuxin Liu, Jianguo Zhang, Akshara Prabhakar, Zhiwei Liu, Shelby Heinecke, Silvio Savarese, Victor Zhong, Caiming Xiong
+arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
+🚀 Overview LLM-based agents can perform complex tasks like web navigation and function calling, but they often fail to generalize when deployed in new environments due to mismatches between their pre-training and the syntax (i.e., UI elements, input/output formats) and dynamics (i.e., environment transition rules) of the test-time environment. Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect. This paper introduces grounded test-time adaptation (GTTA) techniques that allow agents to adapt during deployment – without annotations or expensive retraining – improving robustness and performance in unseen settings.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-11-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-06T00:00:00+00:00">
+    <meta property="article:tag" content="Test-Time Adaptation">
+    <meta property="article:tag" content="LLM Agents">
+    <meta property="article:tag" content="Language Grounding">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "projects",
+        "name": "Grounded Test-Time Adaptation for LLM Agents",
+        "headline": "Grounded Test-Time Adaptation for LLM Agents",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen, \u003ca href=\u0022https:\/\/zuxin.me\/\u0022\u003eZuxin Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/jianguoz.github.io\/\u0022\u003eJianguo Zhang\u003c\/a\u003e, \u003ca href=\u0022https:\/\/aksh555.github.io\/\u0022\u003eAkshara Prabhakar\u003c\/a\u003e, \u003ca href=\u0022https:\/\/sites.google.com\/view\/zhiwei-jim\u0022\u003eZhiwei Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/shelbyh.ai\/\u0022\u003eShelby Heinecke\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.linkedin.com\/in\/silvio-savarese-97b76114\/\u0022\u003eSilvio Savarese\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e, \u003ca href=\u0022http:\/\/cmxiong.com\/\u0022\u003eCaiming Xiong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003earXiv:2511.04847 • Nov 2025\u003c\/em\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.04847\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.04847\u003c\/a\u003e\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cp\u003eLLM-based agents can perform complex tasks like web navigation and function calling, but \u003cstrong\u003ethey often fail to generalize\u003c\/strong\u003e when deployed in new environments due to mismatches between their pre-training and the \u003cem\u003esyntax\u003c\/em\u003e (i.e., UI elements, input\/output formats) and \u003cem\u003edynamics\u003c\/em\u003e (i.e., environment transition rules) of the test-time environment.\nAnnotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect.\nThis paper introduces \u003cstrong\u003egrounded test-time adaptation (GTTA)\u003c\/strong\u003e techniques that allow agents to adapt \u003cem\u003eduring deployment\u003c\/em\u003e \u0026ndash; without annotations or expensive retraining \u0026ndash; improving robustness and performance in unseen settings.\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+          
+          "copyrightYear": "",
+        
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/arthurchen189.github.io\/projects\/gtta\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "dateCreated": "2025-11-06T00:00:00.00Z",
+        "datePublished": "2025-11-06T00:00:00.00Z",
+        "dateModified": "2025-11-06T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "https://arthurchen189.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/arthurchen189.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/arthurchen189.github.io\/projects\/gtta\/",
+        "wordCount" : "557",
+        "genre" : [ 
+      
+      "Research"
+
+    ],
+        "keywords" : [ 
+      
+      "test-time adaptation"
+
+    
+      
+        ,
+
+      
+      "LLM agents"
+
+    
+      
+        ,
+
+      
+      "language grounding"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  
+  
+    
+          <link
+            rel="stylesheet"
+            href="/css/katex.min.css"
+            integrity="sha512-0u6F0kGPTUgsoq8qPa0w03CxxmEz3qYfl9eTPJL8DK4QJE9/XL1SSoiXoYhvDXCrBMBVWtaAIWsWoCg1TkJybA=="
+            crossorigin="anonymous"
+          />
+        
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Arthur Chen 陳皓楠
+</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>University of Waterloo<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/arthurchen189/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:haonan.chen@uwaterloo.ca"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/ArthurChen189"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://x.com/arthurchen189"
+            target="_blank"
+            rel="noopener me"
+            aria-label="X"
+            title="X"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://scholar.google.com/citations?user=r0Qzux8AAAAJ&amp;hl=en"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Google Scholar"
+            title="Google Scholar"
+          >
+            <i class="fas fa-graduation-cap fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Arthur Chen 2020-2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/publications/"
+              
+              title=""
+              >Publications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/projects/"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/experience/"
+              
+              title=""
+              >Experience</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>Grounded Test-Time Adaptation for LLM Agents</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Thu, Nov 6, 2025
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+      <h3>Table of contents</h3>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-authors">📝 Authors</a></li>
+    <li><a href="#-overview">🚀 Overview</a></li>
+    <li><a href="#-problem">📌 Problem</a></li>
+    <li><a href="#-key-contributions">🧠 Key Contributions</a>
+      <ul>
+        <li><a href="#test-time-adaptation-strategies">Test-Time Adaptation Strategies</a></li>
+      </ul>
+    </li>
+    <li><a href="#-methods">🧩 Methods</a>
+      <ul>
+        <li><a href="#-parametric-test-time-adaptation">🧠 Parametric Test-Time Adaptation</a></li>
+        <li><a href="#-non-parametric-dynamics-grounding">🔎 Non-Parametric Dynamics Grounding</a></li>
+      </ul>
+    </li>
+    <li><a href="#-experimental-results">📊 Experimental Results</a></li>
+    <li><a href="#-why-it-matters">📦 Why It Matters</a></li>
+    <li><a href="#-resources">📎 Resources</a></li>
+    <li><a href="#-acknowledgements">🙌 Acknowledgements</a></li>
+  </ul>
+</nav>
+<h2 id="-authors">📝 Authors</h2>
+<p>Arthur Chen, <a href="https://zuxin.me/">Zuxin Liu</a>, <a href="https://jianguoz.github.io/">Jianguo Zhang</a>, <a href="https://aksh555.github.io/">Akshara Prabhakar</a>, <a href="https://sites.google.com/view/zhiwei-jim">Zhiwei Liu</a>, <a href="https://shelbyh.ai/">Shelby Heinecke</a>, <a href="https://www.linkedin.com/in/silvio-savarese-97b76114/">Silvio Savarese</a>, <a href="https://www.victorzhong.com/">Victor Zhong</a>, <a href="http://cmxiong.com/">Caiming Xiong</a><br>
+<em>arXiv:2511.04847 • Nov 2025</em>
+🔗 <a href="https://arxiv.org/abs/2511.04847">https://arxiv.org/abs/2511.04847</a></p>
+<hr>
+<h2 id="-overview">🚀 Overview</h2>
+<p>LLM-based agents can perform complex tasks like web navigation and function calling, but <strong>they often fail to generalize</strong> when deployed in new environments due to mismatches between their pre-training and the <em>syntax</em> (i.e., UI elements, input/output formats) and <em>dynamics</em> (i.e., environment transition rules) of the test-time environment.
+Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect.
+This paper introduces <strong>grounded test-time adaptation (GTTA)</strong> techniques that allow agents to adapt <em>during deployment</em> &ndash; without annotations or expensive retraining &ndash; improving robustness and performance in unseen settings.</p>
+<hr>
+<h2 id="-problem">📌 Problem</h2>
+<p>LLM agents struggle in novel, interactive environments because:</p>
+<ul>
+<li><em>Syntax</em> (e.g., UI elements, input/output formats) differs from training</li>
+<li><em>Dynamics</em> (state transitions) are environment-specific and unpredictable</li>
+</ul>
+<p>The goal is to <strong>enable test-time adaptation</strong> using only observations at test-time (i.e., after LLM model deployment), without supervision or labeled data</p>
+<hr>
+<h2 id="-key-contributions">🧠 Key Contributions</h2>
+<h3 id="test-time-adaptation-strategies">Test-Time Adaptation Strategies</h3>
+<p>We propose two efficient adaptation strategies that operate <em>during deployment</em> and do <strong>not require annotated trajectories or heavy fine-tuning</strong>:</p>
+<ul>
+<li>
+<p><strong>Parametric Test-Time Adaptation</strong><br>
+Learns a lightweight adaptation vector online that shifts the model’s output distribution to better match the environment&rsquo;s <em>syntax</em> (e.g., UI labels).</p>
+</li>
+<li>
+<p><strong>Non-Parametric Dynamics Grounding</strong><br>
+Performs a short persona-/goal-driven exploratory phase to extract <em>environment dynamics</em>, which are then summarized and used to inform subsequent agent decisions.</p>
+</li>
+</ul>
+<p>These strategies leverage only <em>test-time interactions</em>, without pre-collected annotated data or heavy fine-tuning.</p>
+<hr>
+<h2 id="-methods">🧩 Methods</h2>
+<h3 id="-parametric-test-time-adaptation">🧠 Parametric Test-Time Adaptation</h3>
+<img src="/images/gtta/pa_overview.png" alt="Parametric Test-Time Adaptation" width="70%" height="auto">
+A four-step procedure adapts the LLM agent online via a lightweight adaptation vector:
+<ol>
+<li><strong>Initialization:</strong> Create an adaptation vector <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> at the beginning of each episode.</li>
+<li><strong>Interaction:</strong> As the agent performs the task, it receives instructions and feedback from the environment.</li>
+<li><strong>Update:</strong> After each move, update <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> so the agent’s outputs better align with the environment’s style.</li>
+<li><strong>Action Generation:</strong> Use the updated <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> to help the agent generate improved actions as it continues.</li>
+</ol>
+<hr>
+<h3 id="-non-parametric-dynamics-grounding">🔎 Non-Parametric Dynamics Grounding</h3>
+<img src="/images/gtta/npa_overview.png" alt="Non-Parametric Dynamics Grounding" width="70%" height="auto">
+A four-step pipeline builds an *in-context world model* of environment state transitions:
+<ol>
+<li><strong>Persona / Exploratory Goal Synthesis:</strong> Generate diverse goals to probe environment behaviors.</li>
+<li><strong>Exploration &amp; Logging:</strong> Execute exploratory actions to collect transition logs.</li>
+<li><strong>Filtering &amp; Consolidation:</strong> Remove trivial/repetitive rules.</li>
+<li><strong>In-Context Augmentation:</strong> Integrate dynamics knowledge into the agent&rsquo;s prompt.</li>
+</ol>
+<p>This equips the agent with actionable causal insights into environment dynamics without supervised trajectories.</p>
+<hr>
+<h2 id="-experimental-results">📊 Experimental Results</h2>
+<p>We evaluate GTTA across multiple agentic domains &ndash; Web navigation (WebArena), function calling (BFCLv3), and conversational agents (Tau-Bench):
+<img src="/images/gtta/main_results.png" alt="GTTA Experimental Results" width="70%" height="auto"></p>
+<p><strong>Analysis:</strong></p>
+<ul>
+<li><strong>Both adaptation strategies improve performance</strong> over static pre-trained baselines.</li>
+<li><strong>Dynamics grounding shows especially strong gains</strong> in domains with complex transitions.
+<ul>
+<li>E.g., on the WebArena multi-site (i.e., the agent must complete one task across multiple sites) split, success rates improved from <strong>~2% → 23%</strong> with dynamics grounding.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="-why-it-matters">📦 Why It Matters</h2>
+<p>This work provides:</p>
+<ul>
+<li><strong>Deployment-time adaptation</strong> for LLM agents in unseen environments</li>
+<li>Methods are plug-n-play and don&rsquo;t require <strong>annotations or heavy fine-tuning</strong></li>
+<li>A practical path to more robust, generalizable LLM-based agents</li>
+</ul>
+<p>It bridges the gap between static pre-training and dynamic, interactive real-world deployment.</p>
+<hr>
+<h2 id="-resources">📎 Resources</h2>
+<ul>
+<li>📄 <strong>Paper:</strong> <a href="https://arxiv.org/abs/2511.04847">https://arxiv.org/abs/2511.04847</a></li>
+<li>📑 <strong>PDF:</strong> <a href="https://arxiv.org/pdf/2511.04847.pdf">https://arxiv.org/pdf/2511.04847.pdf</a></li>
+<li>🔗 <strong>Code:</strong> <a href="https://github.com/r2llab/GTTA">https://github.com/r2llab/GTTA</a></li>
+</ul>
+<hr>
+<h2 id="-acknowledgements">🙌 Acknowledgements</h2>
+<p>Work was performed during internship at Salesforce AI Research, supervised by Caiming Xiong and Victor Zhong. We thank all collaborators for their help and support.</p>
+
+
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/research/">Research</a></span>
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/test-time-adaptation/">test-time adaptation</a><a class="tag" href="/tags/llm-agents/">LLM agents</a><a class="tag" href="/tags/language-grounding/">language grounding</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Arthur Chen 2020-2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

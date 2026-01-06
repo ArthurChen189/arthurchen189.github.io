@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Arthur Chen</title>
+    <link>https://arthurchen189.github.io/projects/</link>
+    <description>Recent content in Projects on Arthur Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grounded Test-Time Adaptation for LLM Agents</title>
+      <link>https://arthurchen189.github.io/projects/gtta/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://arthurchen189.github.io/projects/gtta/</guid>
+      
+        <description>&lt;h2 id=&#34;-authors&#34;&gt;📝 Authors&lt;/h2&gt;
+&lt;p&gt;Arthur Chen, &lt;a href=&#34;https://zuxin.me/&#34;&gt;Zuxin Liu&lt;/a&gt;, &lt;a href=&#34;https://jianguoz.github.io/&#34;&gt;Jianguo Zhang&lt;/a&gt;, &lt;a href=&#34;https://aksh555.github.io/&#34;&gt;Akshara Prabhakar&lt;/a&gt;, &lt;a href=&#34;https://sites.google.com/view/zhiwei-jim&#34;&gt;Zhiwei Liu&lt;/a&gt;, &lt;a href=&#34;https://shelbyh.ai/&#34;&gt;Shelby Heinecke&lt;/a&gt;, &lt;a href=&#34;https://www.linkedin.com/in/silvio-savarese-97b76114/&#34;&gt;Silvio Savarese&lt;/a&gt;, &lt;a href=&#34;https://www.victorzhong.com/&#34;&gt;Victor Zhong&lt;/a&gt;, &lt;a href=&#34;http://cmxiong.com/&#34;&gt;Caiming Xiong&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;arXiv:2511.04847 • Nov 2025&lt;/em&gt;
+🔗 &lt;a href=&#34;https://arxiv.org/abs/2511.04847&#34;&gt;https://arxiv.org/abs/2511.04847&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-overview&#34;&gt;🚀 Overview&lt;/h2&gt;
+&lt;p&gt;LLM-based agents can perform complex tasks like web navigation and function calling, but &lt;strong&gt;they often fail to generalize&lt;/strong&gt; when deployed in new environments due to mismatches between their pre-training and the &lt;em&gt;syntax&lt;/em&gt; (i.e., UI elements, input/output formats) and &lt;em&gt;dynamics&lt;/em&gt; (i.e., environment transition rules) of the test-time environment.
+Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect.
+This paper introduces &lt;strong&gt;grounded test-time adaptation (GTTA)&lt;/strong&gt; techniques that allow agents to adapt &lt;em&gt;during deployment&lt;/em&gt; &amp;ndash; without annotations or expensive retraining &amp;ndash; improving robustness and performance in unseen settings.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>SynQuE: Estimating Synthetic Dataset Quality Without Annotations</title>
+      <link>https://arthurchen189.github.io/projects/synque/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://arthurchen189.github.io/projects/synque/</guid>
+      
+        <description>&lt;h2 id=&#34;-authors&#34;&gt;📝 Authors&lt;/h2&gt;
+&lt;p&gt;Arthur Chen &amp;amp; &lt;a href=&#34;https://www.victorzhong.com/&#34;&gt;Victor Zhong&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;arXiv:2511.03928 • Nov 2025&lt;/em&gt;&lt;br&gt;
+🔗 &lt;a href=&#34;https://arxiv.org/abs/2511.03928&#34;&gt;https://arxiv.org/abs/2511.03928&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-overview&#34;&gt;🚀 Overview&lt;/h2&gt;
+&lt;img src=&#34;https://arthurchen189.github.io/images/synque/synque_new_fig.png&#34; alt=&#34;SynQuE Overview&#34; width=&#34;70%&#34; height=&#34;auto&#34;&gt;
+&lt;p&gt;&lt;strong&gt;SynQuE&lt;/strong&gt; (Synthetic Dataset Quality Estimation) is a &lt;em&gt;framework and benchmark&lt;/em&gt; for &lt;strong&gt;ranking synthetic datasets by their expected real-world performance&lt;/strong&gt; — &lt;em&gt;without&lt;/em&gt; requiring any labeled real data.&lt;/p&gt;
+&lt;p&gt;This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem&#34;&gt;📌 Problem&lt;/h2&gt;
+&lt;p&gt;Synthetic training data generation is widely used, but:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Not all synthetic datasets are equally useful&lt;/li&gt;
+&lt;li&gt;Larger synthetic training datasets do &lt;strong&gt;not&lt;/strong&gt; guarantee better performance&lt;/li&gt;
+&lt;li&gt;Selecting high-quality synthetic training data &lt;em&gt;without labels&lt;/em&gt; is still unsolved&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SynQuE asks:&lt;/strong&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

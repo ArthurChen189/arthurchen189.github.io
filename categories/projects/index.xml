@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Arthur Chen</title>
+    <link>http://localhost:1313/categories/projects/</link>
+    <description>Recent content in Projects on Arthur Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SynQuE</title>
+      <link>http://localhost:1313/projects/synque/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/synque/</guid>
+      
+        <description>&lt;p&gt;SynQuE is a synthetic dataset quality estimation method that can estimate the quality of a synthetic dataset without the need for human annotations.
+&lt;em&gt;Published on January 5, 2026&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>UniIR</title>
+      <link>http://localhost:1313/projects/uniir/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/uniir/</guid>
+      
+        <description>&lt;p&gt;UniIR is a universal multimodal information retriever that can retrieve information from various modalities, including text, image, video, and audio.
+&lt;em&gt;Published on January 4, 2026&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Grounded Test-Time Adaptation</title>
+      <link>http://localhost:1313/projects/gtta/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/gtta/</guid>
+      
+        <description>&lt;p&gt;SynQuE is a synthetic dataset quality estimation method that can estimate the quality of a synthetic dataset without the need for human annotations.
+&lt;em&gt;Published on January 5, 2026&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

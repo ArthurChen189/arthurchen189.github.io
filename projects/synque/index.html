@@ -1,0 +1,633 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    
+        |
+        SynQuE: Estimating Synthetic Dataset Quality Without Annotations
+      
+
+    
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.149.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="" />
+  <meta
+    name="description"
+    content="University of Waterloo
+"
+  />
+  
+  
+        <link rel="stylesheet" href="/css/anatole.min.9afca1435bf22634690a78ac9e9168ed60abcc28b1591d0a7f28e592626e4a2b.css" integrity="sha256-mvyhQ1vyJjRpCnisnpFo7WCrzCixWR0KfyjlkmJuSis=" crossorigin="anonymous" />
+      
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://arthurchen189.github.io/projects/synque/" />
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  <script
+  async
+  defer
+  src="https://analytics.umami.is/script.js"
+  data-website-id="af8e5ce6-141f-48f1-88cd-a508f1014def"
+></script>
+
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SynQuE: Estimating Synthetic Dataset Quality Without Annotations">
+  <meta name="twitter:description" content="📝 Authors Arthur Chen &amp; Victor Zhong
+arXiv:2511.03928 • Nov 2025
+🔗 https://arxiv.org/abs/2511.03928
+🚀 Overview SynQuE (Synthetic Dataset Quality Estimation) is a framework and benchmark for ranking synthetic datasets by their expected real-world performance — without requiring any labeled real data.
+This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.
+📌 Problem Synthetic training data generation is widely used, but:
+Not all synthetic datasets are equally useful Larger synthetic training datasets do not guarantee better performance Selecting high-quality synthetic training data without labels is still unsolved SynQuE asks:">
+
+
+
+  
+  <meta property="og:url" content="https://arthurchen189.github.io/projects/synque/">
+  <meta property="og:site_name" content="Arthur Chen">
+  <meta property="og:title" content="SynQuE: Estimating Synthetic Dataset Quality Without Annotations">
+  <meta property="og:description" content="📝 Authors Arthur Chen &amp; Victor Zhong
+arXiv:2511.03928 • Nov 2025
+🔗 https://arxiv.org/abs/2511.03928
+🚀 Overview SynQuE (Synthetic Dataset Quality Estimation) is a framework and benchmark for ranking synthetic datasets by their expected real-world performance — without requiring any labeled real data.
+This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.
+📌 Problem Synthetic training data generation is widely used, but:
+Not all synthetic datasets are equally useful Larger synthetic training datasets do not guarantee better performance Selecting high-quality synthetic training data without labels is still unsolved SynQuE asks:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-11-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-06T00:00:00+00:00">
+    <meta property="article:tag" content="Synthetic Data">
+    <meta property="article:tag" content="Evaluation">
+    <meta property="article:tag" content="LLM">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "projects",
+        "name": "SynQuE: Estimating Synthetic Dataset Quality Without Annotations",
+        "headline": "SynQuE: Estimating Synthetic Dataset Quality Without Annotations",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen \u0026amp; \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003earXiv:2511.03928 • Nov 2025\u003c\/em\u003e\u003cbr\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.03928\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.03928\u003c\/a\u003e\u003c\/p\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cimg src=\u0022\/images\/synque\/synque_new_fig.png\u0022 alt=\u0022SynQuE Overview\u0022 width=\u002270%\u0022 height=\u0022auto\u0022\u003e\n\u003cp\u003e\u003cstrong\u003eSynQuE\u003c\/strong\u003e (Synthetic Dataset Quality Estimation) is a \u003cem\u003eframework and benchmark\u003c\/em\u003e for \u003cstrong\u003eranking synthetic datasets by their expected real-world performance\u003c\/strong\u003e — \u003cem\u003ewithout\u003c\/em\u003e requiring any labeled real data.\u003c\/p\u003e\n\u003cp\u003eThis addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-problem\u0022\u003e📌 Problem\u003c\/h2\u003e\n\u003cp\u003eSynthetic training data generation is widely used, but:\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eNot all synthetic datasets are equally useful\u003c\/li\u003e\n\u003cli\u003eLarger synthetic training datasets do \u003cstrong\u003enot\u003c\/strong\u003e guarantee better performance\u003c\/li\u003e\n\u003cli\u003eSelecting high-quality synthetic training data \u003cem\u003ewithout labels\u003c\/em\u003e is still unsolved\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003eSynQuE asks:\u003c\/strong\u003e\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+          
+          "copyrightYear": "",
+        
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/arthurchen189.github.io\/projects\/synque\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "dateCreated": "2025-11-06T00:00:00.00Z",
+        "datePublished": "2025-11-06T00:00:00.00Z",
+        "dateModified": "2025-11-06T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "https://arthurchen189.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/arthurchen189.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/arthurchen189.github.io\/projects\/synque\/",
+        "wordCount" : "415",
+        "genre" : [ 
+      
+      "Research"
+
+    ],
+        "keywords" : [ 
+      
+      "synthetic data"
+
+    
+      
+        ,
+
+      
+      "evaluation"
+
+    
+      
+        ,
+
+      
+      "LLM"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  
+  
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Arthur Chen 陳皓楠
+</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>University of Waterloo<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/arthurchen189/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:haonan.chen@uwaterloo.ca"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/ArthurChen189"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://x.com/arthurchen189"
+            target="_blank"
+            rel="noopener me"
+            aria-label="X"
+            title="X"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://scholar.google.com/citations?user=r0Qzux8AAAAJ&amp;hl=en"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Google Scholar"
+            title="Google Scholar"
+          >
+            <i class="fas fa-graduation-cap fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Arthur Chen 2020-2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/publications/"
+              
+              title=""
+              >Publications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/projects/"
+              
+              title=""
+              >Projects</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/experience/"
+              
+              title=""
+              >Experience</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>SynQuE: Estimating Synthetic Dataset Quality Without Annotations</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Thu, Nov 6, 2025
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
+      <h3>Table of contents</h3>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-authors">📝 Authors</a></li>
+    <li><a href="#-overview">🚀 Overview</a></li>
+    <li><a href="#-problem">📌 Problem</a></li>
+    <li><a href="#-key-contributions">🧠 Key Contributions</a>
+      <ul>
+        <li><a href="#1-problem-formalization">1. Problem Formalization</a></li>
+        <li><a href="#2-proxy-metrics-for-synthetic-data-quality">2. Proxy Metrics for Synthetic Data Quality</a></li>
+      </ul>
+    </li>
+    <li><a href="#-lens-llm-evaluated-normalized-score">🔍 LENS: LLM-Evaluated Normalized Score</a></li>
+    <li><a href="#-experimental-results">📊 Experimental Results</a></li>
+    <li><a href="#-why-synque-matters">📦 Why SynQuE Matters</a></li>
+    <li><a href="#-resources">📎 Resources</a></li>
+    <li><a href="#-acknowledgements">🙌 Acknowledgements</a></li>
+  </ul>
+</nav>
+<h2 id="-authors">📝 Authors</h2>
+<p>Arthur Chen &amp; <a href="https://www.victorzhong.com/">Victor Zhong</a><br>
+<em>arXiv:2511.03928 • Nov 2025</em><br>
+🔗 <a href="https://arxiv.org/abs/2511.03928">https://arxiv.org/abs/2511.03928</a></p>
+<h2 id="-overview">🚀 Overview</h2>
+<img src="/images/synque/synque_new_fig.png" alt="SynQuE Overview" width="70%" height="auto">
+<p><strong>SynQuE</strong> (Synthetic Dataset Quality Estimation) is a <em>framework and benchmark</em> for <strong>ranking synthetic datasets by their expected real-world performance</strong> — <em>without</em> requiring any labeled real data.</p>
+<p>This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.</p>
+<hr>
+<h2 id="-problem">📌 Problem</h2>
+<p>Synthetic training data generation is widely used, but:</p>
+<ul>
+<li>Not all synthetic datasets are equally useful</li>
+<li>Larger synthetic training datasets do <strong>not</strong> guarantee better performance</li>
+<li>Selecting high-quality synthetic training data <em>without labels</em> is still unsolved</li>
+</ul>
+<p><strong>SynQuE asks:</strong></p>
+<blockquote>
+<p><em>Can we estimate which synthetic dataset will yield the best real-world performance using only a small amount of <strong>unannotated</strong> real data?</em></p></blockquote>
+<hr>
+<h2 id="-key-contributions">🧠 Key Contributions</h2>
+<h3 id="1-problem-formalization">1. Problem Formalization</h3>
+<p>We formalize <strong>SynQuE</strong>, a new evaluation setting:<br>
+given a pool of synthetic datasets and a small unannotated real dataset, estimate which synthetic dataset will produce the best downstream model performance.</p>
+<h3 id="2-proxy-metrics-for-synthetic-data-quality">2. Proxy Metrics for Synthetic Data Quality</h3>
+<p>We adapt multiple <strong>annotation-free divergence measures</strong>, including:</p>
+<ul>
+<li>
+<p><strong>Distribution-matching divergences</strong></p>
+<ul>
+<li>Proxy-A-Distance (PAD)</li>
+<li>Maximum Mean Discrepancy (MMD)</li>
+</ul>
+</li>
+<li>
+<p><strong>Diversity-matching divergences</strong></p>
+<ul>
+<li>Mean Distance to Medoid (MDM)</li>
+</ul>
+</li>
+<li>
+<p><strong>Mauve score divergence</strong></p>
+<ul>
+<li>A metric to compute divergence between AI generated text and human-written text</li>
+</ul>
+</li>
+<li>
+<p><strong>LENS</strong> &ndash; a novel <strong>LLM-based proxy metric</strong> that generates a rubric to characterize the differences between synthetic and real data</p>
+</li>
+</ul>
+<hr>
+<h2 id="-lens-llm-evaluated-normalized-score">🔍 LENS: LLM-Evaluated Normalized Score</h2>
+<p><strong>LENS</strong> is a reasoning-based synthetic data evaluator that:</p>
+<ol>
+<li>Derives task-relevant rubrics by comparing synthetic and real (unlabeled) data</li>
+<li>Scores synthetic examples using an LLM’s semantic understanding</li>
+<li>Aggregates scores into a dataset-level quality estimate</li>
+</ol>
+<p>LENS captures <strong>semantic and contextual mismatches</strong> that embedding-only metrics often miss, especially in complex reasoning tasks.</p>
+<hr>
+<h2 id="-experimental-results">📊 Experimental Results</h2>
+<img src="/images/synque/top3_results.png" alt="SynQuE Experimental Results" width="70%" height="auto">
+<p>Across diverse tasks, SynQuE shows that:</p>
+<ul>
+<li>Selecting synthetic datasets via SynQuE consistently yields substantial gains over random selection in real-world applications</li>
+<li>Proxy metrics improve downstream performance when trained on top-ranked synthetic datasets compared to random selection</li>
+<li><strong>LENS outperforms embedding-based metrics</strong> on long-horizon tasks such as Web Navigation</li>
+</ul>
+<p><strong>Example:</strong><br>
+On Text-to-SQL, selecting the top-ranked synthetic datasets improves accuracy by <strong>~8 points</strong> compared to random selection.</p>
+<hr>
+<h2 id="-why-synque-matters">📦 Why SynQuE Matters</h2>
+<p>SynQuE enables:</p>
+<ul>
+<li><strong>Annotation-free synthetic dataset selection</strong></li>
+<li>More efficient use of synthetic data budgets</li>
+<li>Practical deployment in privacy-sensitive domains (e.g., healthcare, finance)</li>
+</ul>
+<p>It is the <strong>first benchmark</strong> to systematically study synthetic dataset quality estimation without labeled real data.</p>
+<hr>
+<h2 id="-resources">📎 Resources</h2>
+<ul>
+<li>📄 <strong>Paper:</strong> <a href="https://arxiv.org/abs/2511.03928">https://arxiv.org/abs/2511.03928</a></li>
+<li>📑 <strong>PDF:</strong> <a href="https://arxiv.org/pdf/2511.03928.pdf">https://arxiv.org/pdf/2511.03928.pdf</a></li>
+<li>🔗 <strong>Code:</strong> <a href="https://github.com/r2llab/synque">https://github.com/r2llab/synque</a></li>
+</ul>
+<hr>
+<h2 id="-acknowledgements">🙌 Acknowledgements</h2>
+<p>This work was conducted at the University of Waterloo and contributes to bridging the gap between synthetic data generation and real-world model performance evaluation.</p>
+
+
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/research/">Research</a></span>
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/synthetic-data/">synthetic data</a><a class="tag" href="/tags/evaluation/">evaluation</a><a class="tag" href="/tags/llm/">LLM</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Arthur Chen 2020-2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
