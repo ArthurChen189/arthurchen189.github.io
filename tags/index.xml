@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Arthur Chen</title>
-    <link>https://arthurchen189.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Arthur Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Evaluation</title>
-      <link>https://arthurchen189.github.io/tags/evaluation/</link>
+      <link>http://localhost:1313/tags/evaluation/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/evaluation/</guid>
+      <guid>http://localhost:1313/tags/evaluation/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>Language Grounding</title>
-      <link>https://arthurchen189.github.io/tags/language-grounding/</link>
+      <title>Grounded Interaction</title>
+      <link>http://localhost:1313/tags/grounded-interaction/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/language-grounding/</guid>
+      <guid>http://localhost:1313/tags/grounded-interaction/</guid>
       
         <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>LLM</title>
-      <link>https://arthurchen189.github.io/tags/llm/</link>
+      <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/llm/</guid>
+      <guid>http://localhost:1313/tags/llm/</guid>
       
         <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>LLM Agents</title>
-      <link>https://arthurchen189.github.io/tags/llm-agents/</link>
+      <link>http://localhost:1313/tags/llm-agents/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/llm-agents/</guid>
+      <guid>http://localhost:1313/tags/llm-agents/</guid>
       
         <description></description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>Synthetic Data</title>
-      <link>https://arthurchen189.github.io/tags/synthetic-data/</link>
+      <link>http://localhost:1313/tags/synthetic-data/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/synthetic-data/</guid>
+      <guid>http://localhost:1313/tags/synthetic-data/</guid>
       
         <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>Test-Time Adaptation</title>
-      <link>https://arthurchen189.github.io/tags/test-time-adaptation/</link>
+      <link>http://localhost:1313/tags/test-time-adaptation/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://arthurchen189.github.io/tags/test-time-adaptation/</guid>
+      <guid>http://localhost:1313/tags/test-time-adaptation/</guid>
       
         <description></description>
       

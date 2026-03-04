@@ -6,19 +6,19 @@
   
     class="html theme--light"
   
-><head>
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <title>
     
         |
-        Grounded Test-Time Adaptation for LLM Agents
+        Test-Time Adaptation for LLM Agents via Environment Interaction
       
 
     
 
   </title>
 
-  <meta name="generator" content="Hugo 0.155.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="generator" content="Hugo 0.149.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="" />
   <meta
     name="description"
@@ -27,7 +27,7 @@
   />
   
   
-        <link rel="stylesheet" href="/css/anatole.min.9afca1435bf22634690a78ac9e9168ed60abcc28b1591d0a7f28e592626e4a2b.css" integrity="sha256-mvyhQ1vyJjRpCnisnpFo7WCrzCixWR0KfyjlkmJuSis=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/anatole.css" />
       
   <link
     rel="stylesheet"
@@ -75,7 +75,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://arthurchen189.github.io/projects/gtta/" />
+  <link rel="canonical" href="http://localhost:1313/projects/gtta/" />
   
   
   
@@ -98,13 +98,7 @@
     ></script>
   
 
-  <script
-  async
-  defer
-  src="https://analytics.umami.is/script.js"
-  data-website-id="af8e5ce6-141f-48f1-88cd-a508f1014def"
-></script>
-
+  
 
   
 
@@ -114,19 +108,19 @@
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Grounded Test-Time Adaptation for LLM Agents">
+  <meta name="twitter:title" content="Test-Time Adaptation for LLM Agents via Environment Interaction">
   <meta name="twitter:description" content="📝 Authors Arthur Chen, Zuxin Liu, Jianguo Zhang, Akshara Prabhakar, Zhiwei Liu, Shelby Heinecke, Silvio Savarese, Victor Zhong, Caiming Xiong
-arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
+International Conference on Learning Representations (ICLR), 2026. 🔗 https://arxiv.org/abs/2511.04847
 🚀 Overview LLM-based agents can perform complex tasks like web navigation and function calling, but they often fail to generalize when deployed in new environments due to mismatches between their pre-training and the syntax (i.e., UI elements, input/output formats) and dynamics (i.e., environment transition rules) of the test-time environment. Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect. This paper introduces grounded test-time adaptation (GTTA) techniques that allow agents to adapt during deployment – without annotations or expensive retraining – improving robustness and performance in unseen settings.">
 
 
 
   
-  <meta property="og:url" content="https://arthurchen189.github.io/projects/gtta/">
+  <meta property="og:url" content="http://localhost:1313/projects/gtta/">
   <meta property="og:site_name" content="Arthur Chen">
-  <meta property="og:title" content="Grounded Test-Time Adaptation for LLM Agents">
+  <meta property="og:title" content="Test-Time Adaptation for LLM Agents via Environment Interaction">
   <meta property="og:description" content="📝 Authors Arthur Chen, Zuxin Liu, Jianguo Zhang, Akshara Prabhakar, Zhiwei Liu, Shelby Heinecke, Silvio Savarese, Victor Zhong, Caiming Xiong
-arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
+International Conference on Learning Representations (ICLR), 2026. 🔗 https://arxiv.org/abs/2511.04847
 🚀 Overview LLM-based agents can perform complex tasks like web navigation and function calling, but they often fail to generalize when deployed in new environments due to mismatches between their pre-training and the syntax (i.e., UI elements, input/output formats) and dynamics (i.e., environment transition rules) of the test-time environment. Annotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect. This paper introduces grounded test-time adaptation (GTTA) techniques that allow agents to adapt during deployment – without annotations or expensive retraining – improving robustness and performance in unseen settings.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -135,7 +129,7 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
     <meta property="article:modified_time" content="2026-01-06T18:28:51+00:00">
     <meta property="article:tag" content="Test-Time Adaptation">
     <meta property="article:tag" content="LLM Agents">
-    <meta property="article:tag" content="Language Grounding">
+    <meta property="article:tag" content="Grounded Interaction">
 
 
 
@@ -148,12 +142,12 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "projects",
-        "name": "Grounded Test-Time Adaptation for LLM Agents",
-        "headline": "Grounded Test-Time Adaptation for LLM Agents",
+        "name": "Test-Time Adaptation for LLM Agents via Environment Interaction",
+        "headline": "Test-Time Adaptation for LLM Agents via Environment Interaction",
         "alternativeHeadline": "",
         "description": "
       
-        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen, \u003ca href=\u0022https:\/\/zuxin.me\/\u0022\u003eZuxin Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/jianguoz.github.io\/\u0022\u003eJianguo Zhang\u003c\/a\u003e, \u003ca href=\u0022https:\/\/aksh555.github.io\/\u0022\u003eAkshara Prabhakar\u003c\/a\u003e, \u003ca href=\u0022https:\/\/sites.google.com\/view\/zhiwei-jim\u0022\u003eZhiwei Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/shelbyh.ai\/\u0022\u003eShelby Heinecke\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.linkedin.com\/in\/silvio-savarese-97b76114\/\u0022\u003eSilvio Savarese\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e, \u003ca href=\u0022http:\/\/cmxiong.com\/\u0022\u003eCaiming Xiong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003earXiv:2511.04847 • Nov 2025\u003c\/em\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.04847\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.04847\u003c\/a\u003e\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cp\u003eLLM-based agents can perform complex tasks like web navigation and function calling, but \u003cstrong\u003ethey often fail to generalize\u003c\/strong\u003e when deployed in new environments due to mismatches between their pre-training and the \u003cem\u003esyntax\u003c\/em\u003e (i.e., UI elements, input\/output formats) and \u003cem\u003edynamics\u003c\/em\u003e (i.e., environment transition rules) of the test-time environment.\nAnnotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect.\nThis paper introduces \u003cstrong\u003egrounded test-time adaptation (GTTA)\u003c\/strong\u003e techniques that allow agents to adapt \u003cem\u003eduring deployment\u003c\/em\u003e \u0026ndash; without annotations or expensive retraining \u0026ndash; improving robustness and performance in unseen settings.\u003c\/p\u003e
+        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen, \u003ca href=\u0022https:\/\/zuxin.me\/\u0022\u003eZuxin Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/jianguoz.github.io\/\u0022\u003eJianguo Zhang\u003c\/a\u003e, \u003ca href=\u0022https:\/\/aksh555.github.io\/\u0022\u003eAkshara Prabhakar\u003c\/a\u003e, \u003ca href=\u0022https:\/\/sites.google.com\/view\/zhiwei-jim\u0022\u003eZhiwei Liu\u003c\/a\u003e, \u003ca href=\u0022https:\/\/shelbyh.ai\/\u0022\u003eShelby Heinecke\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.linkedin.com\/in\/silvio-savarese-97b76114\/\u0022\u003eSilvio Savarese\u003c\/a\u003e, \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e, \u003ca href=\u0022http:\/\/cmxiong.com\/\u0022\u003eCaiming Xiong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003eInternational Conference on Learning Representations (ICLR), 2026.\u003c\/em\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.04847\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.04847\u003c\/a\u003e\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cp\u003eLLM-based agents can perform complex tasks like web navigation and function calling, but \u003cstrong\u003ethey often fail to generalize\u003c\/strong\u003e when deployed in new environments due to mismatches between their pre-training and the \u003cem\u003esyntax\u003c\/em\u003e (i.e., UI elements, input\/output formats) and \u003cem\u003edynamics\u003c\/em\u003e (i.e., environment transition rules) of the test-time environment.\nAnnotated trajectories for LLM agents to learn to adapt to new environments is often not available or is too expensive to collect.\nThis paper introduces \u003cstrong\u003egrounded test-time adaptation (GTTA)\u003c\/strong\u003e techniques that allow agents to adapt \u003cem\u003eduring deployment\u003c\/em\u003e \u0026ndash; without annotations or expensive retraining \u0026ndash; improving robustness and performance in unseen settings.\u003c\/p\u003e
 
 
       
@@ -169,7 +163,7 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/arthurchen189.github.io\/projects\/gtta\/"
+            "@id": "http:\/\/localhost:1313\/projects\/gtta\/"
         },
         "author" : {
             "@type": "Person",
@@ -193,10 +187,10 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
         "publisher":{
             "@type":"Organization",
             "name":  null ,
-            "url": "https://arthurchen189.github.io/",
+            "url": "http://localhost:1313/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https:\/\/arthurchen189.github.io\/favicons\/favicon-32x32.png",
+                "url": "http:\/\/localhost:1313\/favicons\/favicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
@@ -206,8 +200,8 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
       ]
 
     ,
-        "url" : "https:\/\/arthurchen189.github.io\/projects\/gtta\/",
-        "wordCount" : "557",
+        "url" : "http:\/\/localhost:1313\/projects\/gtta\/",
+        "wordCount" : "558",
         "genre" : [ 
       
       "Research"
@@ -229,7 +223,7 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
         ,
 
       
-      "language grounding"
+      "grounded interaction"
 
     ]
     }
@@ -244,8 +238,8 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
     
           <link
             rel="stylesheet"
-            href="/css/katex.min.css"
-            integrity="sha512-gWUQDU5B22UGz/rEIQJe68dlZB1yHK/SKBTU8R3R2lHb32tt5W1fmG6yFdtxwyAZouax6qDVfGGW0j2mzP1lnA=="
+            href="/css/katex.css"
+            integrity="sha512-pS95BqEcsxzNYyqbfXIoQkPeGHeR8sIztHNReGWgWQYmG2J&#43;lmGQ5ZZZb6mtJF/xHf9FdWeEyYDr3T7dOSBo4g=="
             crossorigin="anonymous"
           />
         
@@ -448,7 +442,7 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
     
     <div class="post__content">
       
-        <h1>Grounded Test-Time Adaptation for LLM Agents</h1>
+        <h1>Test-Time Adaptation for LLM Agents via Environment Interaction</h1>
       
       
         <ul class="post__meta">
@@ -481,8 +475,8 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
     </li>
     <li><a href="#-methods">🧩 Methods</a>
       <ul>
-        <li><a href="#-parametric-test-time-adaptation">🧠 Parametric Test-Time Adaptation</a></li>
-        <li><a href="#-non-parametric-dynamics-grounding">🔎 Non-Parametric Dynamics Grounding</a></li>
+        <li><a href="#-syntactic-alignment-sa">🧠 Syntactic Alignment (SA)</a></li>
+        <li><a href="#-dynamics-grounding-dg">🔎 Dynamics Grounding (DG)</a></li>
       </ul>
     </li>
     <li><a href="#-experimental-results">📊 Experimental Results</a></li>
@@ -493,7 +487,7 @@ arXiv:2511.04847 • Nov 2025 🔗 https://arxiv.org/abs/2511.04847
 </nav>
 <h2 id="-authors">📝 Authors</h2>
 <p>Arthur Chen, <a href="https://zuxin.me/">Zuxin Liu</a>, <a href="https://jianguoz.github.io/">Jianguo Zhang</a>, <a href="https://aksh555.github.io/">Akshara Prabhakar</a>, <a href="https://sites.google.com/view/zhiwei-jim">Zhiwei Liu</a>, <a href="https://shelbyh.ai/">Shelby Heinecke</a>, <a href="https://www.linkedin.com/in/silvio-savarese-97b76114/">Silvio Savarese</a>, <a href="https://www.victorzhong.com/">Victor Zhong</a>, <a href="http://cmxiong.com/">Caiming Xiong</a><br>
-<em>arXiv:2511.04847 • Nov 2025</em>
+<em>International Conference on Learning Representations (ICLR), 2026.</em>
 🔗 <a href="https://arxiv.org/abs/2511.04847">https://arxiv.org/abs/2511.04847</a></p>
 <hr>
 <h2 id="-overview">🚀 Overview</h2>
@@ -514,19 +508,19 @@ This paper introduces <strong>grounded test-time adaptation (GTTA)</strong> tech
 <p>We propose two efficient adaptation strategies that operate <em>during deployment</em> and do <strong>not require annotated trajectories or heavy fine-tuning</strong>:</p>
 <ul>
 <li>
-<p><strong>Parametric Test-Time Adaptation</strong><br>
+<p><strong>Syntactic Alignment</strong><br>
 Learns a lightweight adaptation vector online that shifts the model’s output distribution to better match the environment&rsquo;s <em>syntax</em> (e.g., UI labels).</p>
 </li>
 <li>
-<p><strong>Non-Parametric Dynamics Grounding</strong><br>
+<p><strong>Dynamics Grounding</strong><br>
 Performs a short persona-/goal-driven exploratory phase to extract <em>environment dynamics</em>, which are then summarized and used to inform subsequent agent decisions.</p>
 </li>
 </ul>
 <p>These strategies leverage only <em>test-time interactions</em>, without pre-collected annotated data or heavy fine-tuning.</p>
 <hr>
 <h2 id="-methods">🧩 Methods</h2>
-<h3 id="-parametric-test-time-adaptation">🧠 Parametric Test-Time Adaptation</h3>
-<img src="/images/gtta/pa_overview.png" alt="Parametric Test-Time Adaptation" width="70%" height="auto">
+<h3 id="-syntactic-alignment-sa">🧠 Syntactic Alignment (SA)</h3>
+<img src="/images/gtta/pa_overview.png" alt="Syntactic Alignment" width="70%" height="auto">
 A four-step procedure adapts the LLM agent online via a lightweight adaptation vector:
 <ol>
 <li><strong>Initialization:</strong> Create an adaptation vector <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> at the beginning of each episode.</li>
@@ -535,9 +529,9 @@ A four-step procedure adapts the LLM agent online via a lightweight adaptation v
 <li><strong>Action Generation:</strong> Use the updated <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span> to help the agent generate improved actions as it continues.</li>
 </ol>
 <hr>
-<h3 id="-non-parametric-dynamics-grounding">🔎 Non-Parametric Dynamics Grounding</h3>
-<img src="/images/gtta/npa_overview.png" alt="Non-Parametric Dynamics Grounding" width="70%" height="auto">
-A four-step pipeline builds an *in-context world model* of environment state transitions:
+<h3 id="-dynamics-grounding-dg">🔎 Dynamics Grounding (DG)</h3>
+<img src="/images/gtta/npa_overview.png" alt="Dynamics Grounding" width="70%" height="auto">
+<p>A four-step pipeline builds an <em>in-context world model</em> of environment state transitions:</p>
 <ol>
 <li><strong>Persona / Exploratory Goal Synthesis:</strong> Generate diverse goals to probe environment behaviors.</li>
 <li><strong>Exploration &amp; Logging:</strong> Execute exploratory actions to collect transition logs.</li>
@@ -588,7 +582,7 @@ A four-step pipeline builds an *in-context world model* of environment state tra
       
 
       
-        <span><a class="tag" href="/tags/test-time-adaptation/">test-time adaptation</a><a class="tag" href="/tags/llm-agents/">LLM agents</a><a class="tag" href="/tags/language-grounding/">language grounding</a></span>
+        <span><a class="tag" href="/tags/test-time-adaptation/">test-time adaptation</a><a class="tag" href="/tags/llm-agents/">LLM agents</a><a class="tag" href="/tags/grounded-interaction/">grounded interaction</a></span>
 
 
       

@@ -6,7 +6,7 @@
   
     class="html theme--light"
   
-><head>
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <title>
     
@@ -18,7 +18,7 @@
 
   </title>
 
-  <meta name="generator" content="Hugo 0.155.3"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="generator" content="Hugo 0.149.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="" />
   <meta
     name="description"
@@ -27,7 +27,7 @@
   />
   
   
-        <link rel="stylesheet" href="/css/anatole.min.9afca1435bf22634690a78ac9e9168ed60abcc28b1591d0a7f28e592626e4a2b.css" integrity="sha256-mvyhQ1vyJjRpCnisnpFo7WCrzCixWR0KfyjlkmJuSis=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/anatole.css" />
       
   <link
     rel="stylesheet"
@@ -75,7 +75,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://arthurchen189.github.io/projects/synque/" />
+  <link rel="canonical" href="http://localhost:1313/projects/synque/" />
   
   
   
@@ -98,13 +98,7 @@
     ></script>
   
 
-  <script
-  async
-  defer
-  src="https://analytics.umami.is/script.js"
-  data-website-id="af8e5ce6-141f-48f1-88cd-a508f1014def"
-></script>
-
+  
 
   
 
@@ -116,26 +110,24 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="SynQuE: Estimating Synthetic Dataset Quality Without Annotations">
   <meta name="twitter:description" content="📝 Authors Arthur Chen &amp; Victor Zhong
-arXiv:2511.03928 • Nov 2025
+International Conference on Learning Representations (ICLR), DATA-FM Workshop, 2026.
 🔗 https://arxiv.org/abs/2511.03928
 🚀 Overview SynQuE (Synthetic Dataset Quality Estimation) is a framework and benchmark for ranking synthetic datasets by their expected real-world performance — without requiring any labeled real data.
 This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.
-📌 Problem Synthetic training data generation is widely used, but:
-Not all synthetic datasets are equally useful Larger synthetic training datasets do not guarantee better performance Selecting high-quality synthetic training data without labels is still unsolved SynQuE asks:">
+📌 Problem Synthetic training data generation is widely used, but:">
 
 
 
   
-  <meta property="og:url" content="https://arthurchen189.github.io/projects/synque/">
+  <meta property="og:url" content="http://localhost:1313/projects/synque/">
   <meta property="og:site_name" content="Arthur Chen">
   <meta property="og:title" content="SynQuE: Estimating Synthetic Dataset Quality Without Annotations">
   <meta property="og:description" content="📝 Authors Arthur Chen &amp; Victor Zhong
-arXiv:2511.03928 • Nov 2025
+International Conference on Learning Representations (ICLR), DATA-FM Workshop, 2026.
 🔗 https://arxiv.org/abs/2511.03928
 🚀 Overview SynQuE (Synthetic Dataset Quality Estimation) is a framework and benchmark for ranking synthetic datasets by their expected real-world performance — without requiring any labeled real data.
 This addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.
-📌 Problem Synthetic training data generation is widely used, but:
-Not all synthetic datasets are equally useful Larger synthetic training datasets do not guarantee better performance Selecting high-quality synthetic training data without labels is still unsolved SynQuE asks:">
+📌 Problem Synthetic training data generation is widely used, but:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -161,7 +153,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
         "alternativeHeadline": "",
         "description": "
       
-        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen \u0026amp; \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003earXiv:2511.03928 • Nov 2025\u003c\/em\u003e\u003cbr\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.03928\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.03928\u003c\/a\u003e\u003c\/p\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cimg src=\u0022\/images\/synque\/synque_new_fig.png\u0022 alt=\u0022SynQuE Overview\u0022 width=\u002270%\u0022 height=\u0022auto\u0022\u003e\n\u003cp\u003e\u003cstrong\u003eSynQuE\u003c\/strong\u003e (Synthetic Dataset Quality Estimation) is a \u003cem\u003eframework and benchmark\u003c\/em\u003e for \u003cstrong\u003eranking synthetic datasets by their expected real-world performance\u003c\/strong\u003e — \u003cem\u003ewithout\u003c\/em\u003e requiring any labeled real data.\u003c\/p\u003e\n\u003cp\u003eThis addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-problem\u0022\u003e📌 Problem\u003c\/h2\u003e\n\u003cp\u003eSynthetic training data generation is widely used, but:\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eNot all synthetic datasets are equally useful\u003c\/li\u003e\n\u003cli\u003eLarger synthetic training datasets do \u003cstrong\u003enot\u003c\/strong\u003e guarantee better performance\u003c\/li\u003e\n\u003cli\u003eSelecting high-quality synthetic training data \u003cem\u003ewithout labels\u003c\/em\u003e is still unsolved\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003eSynQuE asks:\u003c\/strong\u003e\u003c\/p\u003e
+        \u003ch2 id=\u0022-authors\u0022\u003e📝 Authors\u003c\/h2\u003e\n\u003cp\u003eArthur Chen \u0026amp; \u003ca href=\u0022https:\/\/www.victorzhong.com\/\u0022\u003eVictor Zhong\u003c\/a\u003e\u003cbr\u003e\n\u003cem\u003eInternational Conference on Learning Representations (ICLR), DATA-FM Workshop, 2026.\u003c\/em\u003e\u003cbr\u003e\n🔗 \u003ca href=\u0022https:\/\/arxiv.org\/abs\/2511.03928\u0022\u003ehttps:\/\/arxiv.org\/abs\/2511.03928\u003c\/a\u003e\u003c\/p\u003e\n\u003ch2 id=\u0022-overview\u0022\u003e🚀 Overview\u003c\/h2\u003e\n\u003cimg src=\u0022\/images\/synque\/synque_new_fig.png\u0022 alt=\u0022SynQuE Overview\u0022 width=\u002270%\u0022 height=\u0022auto\u0022\u003e\n\u003cp\u003e\u003cstrong\u003eSynQuE\u003c\/strong\u003e (Synthetic Dataset Quality Estimation) is a \u003cem\u003eframework and benchmark\u003c\/em\u003e for \u003cstrong\u003eranking synthetic datasets by their expected real-world performance\u003c\/strong\u003e — \u003cem\u003ewithout\u003c\/em\u003e requiring any labeled real data.\u003c\/p\u003e\n\u003cp\u003eThis addresses a core bottleneck in data-scarce or privacy-sensitive settings where annotation is expensive or infeasible.\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022-problem\u0022\u003e📌 Problem\u003c\/h2\u003e\n\u003cp\u003eSynthetic training data generation is widely used, but:\u003c\/p\u003e
 
 
       
@@ -177,7 +169,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/arthurchen189.github.io\/projects\/synque\/"
+            "@id": "http:\/\/localhost:1313\/projects\/synque\/"
         },
         "author" : {
             "@type": "Person",
@@ -201,10 +193,10 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
         "publisher":{
             "@type":"Organization",
             "name":  null ,
-            "url": "https://arthurchen189.github.io/",
+            "url": "http://localhost:1313/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https:\/\/arthurchen189.github.io\/favicons\/favicon-32x32.png",
+                "url": "http:\/\/localhost:1313\/favicons\/favicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
@@ -214,8 +206,8 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
       ]
 
     ,
-        "url" : "https:\/\/arthurchen189.github.io\/projects\/synque\/",
-        "wordCount" : "422",
+        "url" : "http:\/\/localhost:1313\/projects\/synque\/",
+        "wordCount" : "427",
         "genre" : [ 
       
       "Research"
@@ -465,7 +457,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">2-minute read</span>
+            <span class="post__meta-text">3-minute read</span>
           </li>
         </ul>
       <h3>Table of contents</h3>
@@ -489,7 +481,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
 </nav>
 <h2 id="-authors">📝 Authors</h2>
 <p>Arthur Chen &amp; <a href="https://www.victorzhong.com/">Victor Zhong</a><br>
-<em>arXiv:2511.03928 • Nov 2025</em><br>
+<em>International Conference on Learning Representations (ICLR), DATA-FM Workshop, 2026.</em><br>
 🔗 <a href="https://arxiv.org/abs/2511.03928">https://arxiv.org/abs/2511.03928</a></p>
 <h2 id="-overview">🚀 Overview</h2>
 <img src="/images/synque/synque_new_fig.png" alt="SynQuE Overview" width="70%" height="auto">
@@ -505,8 +497,7 @@ Not all synthetic datasets are equally useful Larger synthetic training datasets
 </ul>
 <p><strong>SynQuE asks:</strong></p>
 <blockquote>
-<p><em>Can we estimate which synthetic dataset will yield the best real-world performance using only a small amount of <strong>unannotated</strong> real data?</em></p>
-</blockquote>
+<p><em>Can we estimate which synthetic dataset will yield the best real-world performance using only a small amount of <strong>unannotated</strong> real data?</em></p></blockquote>
 <hr>
 <h2 id="-key-contributions">🧠 Key Contributions</h2>
 <h3 id="1-problem-formalization">1. Problem Formalization</h3>
