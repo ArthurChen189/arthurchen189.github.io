@@ -6,12 +6,14 @@
     <description>Recent content in Grounded Interaction on Arthur Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>haonan.chen@uwaterloo.ca (Arthur Chen)</managingEditor>
+    <webMaster>haonan.chen@uwaterloo.ca (Arthur Chen)</webMaster>
     <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/tags/grounded-interaction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test-Time Adaptation for LLM Agents via Environment Interaction</title>
       <link>https://arthurchen189.github.io/projects/gtta/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/projects/gtta/</guid>
       
         <description>&lt;h2 id=&#34;-authors&#34;&gt;📝 Authors&lt;/h2&gt;

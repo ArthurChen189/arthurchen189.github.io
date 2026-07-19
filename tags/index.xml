@@ -6,12 +6,14 @@
     <description>Recent content in Tags on Arthur Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>haonan.chen@uwaterloo.ca (Arthur Chen)</managingEditor>
+    <webMaster>haonan.chen@uwaterloo.ca (Arthur Chen)</webMaster>
     <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://arthurchen189.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Evaluation</title>
       <link>https://arthurchen189.github.io/tags/evaluation/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/evaluation/</guid>
       
         <description></description>
@@ -22,7 +24,7 @@
       <title>Grounded Interaction</title>
       <link>https://arthurchen189.github.io/tags/grounded-interaction/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/grounded-interaction/</guid>
       
         <description></description>
@@ -33,7 +35,7 @@
       <title>LLM</title>
       <link>https://arthurchen189.github.io/tags/llm/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/llm/</guid>
       
         <description></description>
@@ -44,7 +46,7 @@
       <title>LLM Agents</title>
       <link>https://arthurchen189.github.io/tags/llm-agents/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/llm-agents/</guid>
       
         <description></description>
@@ -55,7 +57,7 @@
       <title>Synthetic Data</title>
       <link>https://arthurchen189.github.io/tags/synthetic-data/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/synthetic-data/</guid>
       
         <description></description>
@@ -66,7 +68,7 @@
       <title>Test-Time Adaptation</title>
       <link>https://arthurchen189.github.io/tags/test-time-adaptation/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>haonan.chen@uwaterloo.ca (Arthur Chen)</author>
       <guid>https://arthurchen189.github.io/tags/test-time-adaptation/</guid>
       
         <description></description>
